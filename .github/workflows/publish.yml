@@ -3,6 +3,7 @@ name: Publish
 
 on:
   release:
+    types: [published]
 
 jobs:
   release:
@@ -18,3 +19,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           goos: linux
           goarch: ${{ matrix.goarch }}
+          overwrite: true
