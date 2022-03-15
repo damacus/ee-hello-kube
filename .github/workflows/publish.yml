@@ -22,7 +22,7 @@ jobs:
           overwrite: true
 
   build_and_push_container:
-    name: Release Go Binary
+    name: Build & Push Container
     runs-on: ubuntu-latest
     needs: [release]
     steps:
