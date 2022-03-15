@@ -1,2 +1,3 @@
 # ee-hello-kube
-An over the top hello world with Kube
+
+A Hello World app written in GoLang deployed to Kubernetes.

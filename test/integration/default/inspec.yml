@@ -1,0 +1,7 @@
+---
+name: ee-hello-kube
+title: Docker container tests for ee-hello-kube
+license: Apache-2.0
+copyright: None
+summary: Verify webserver
+version: 0.0.1
