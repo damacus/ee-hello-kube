@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    name: release
+    name: Release Go Binary
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -21,6 +21,10 @@ jobs:
           goarch: ${{ matrix.goarch }}
           overwrite: true
 
+  build_and_push_container:
+    name: Release Go Binary
+    runs-on: ubuntu-latest
+    steps:
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
 
