@@ -1,11 +1,11 @@
 FROM alpine
 ARG VERSION=v0.0.4
-ARG ARCH=
-ARG OS=linux
+ARG TARGETARCH
+ARG TARGETOS
 
-RUN apk add curl &&\
-  curl -L -o /tmp/ee-hello-kube.tar.gz https://github.com/damacus/ee-hello-kube/releases/download/${VERSION}/ee-hello-kube-${VERSION}-${OS}-${ARCH}.tar.gz &&\
-  tar -xzf /tmp/ee-hello-kube.tar.gz -C /usr/local/bin &&\
+RUN apk add curl
+RUN curl -L -o /tmp/ee-hello-kube.tar.gz https://github.com/damacus/ee-hello-kube/releases/download/${VERSION}/ee-hello-kube-${VERSION}-${TARGETOS}-${TARGETARCH}.tar.gz
+RUN tar -xzf /tmp/ee-hello-kube.tar.gz -C /usr/local/bin &&\
   chmod +x /usr/local/bin/ee-hello-kube &&\
   apk del curl &&\
   rm /tmp/ee-hello-kube.tar.gz && \
