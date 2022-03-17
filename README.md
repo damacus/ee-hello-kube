@@ -30,9 +30,7 @@ The docker-compose file is there for quick local testing to see if the app works
 
 ## Helm Chart
 
-Using a basic helm chart we use a delpoyment to serve up the Docker container.
-
-This is not currently passing health checks when run on my local k3s cluster.
+Using a basic helm chart we use a delpoyment to serve up the Docker container, fronted my the traefik Ingress controller.
 
 ## CI System
 
