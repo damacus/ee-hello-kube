@@ -1,0 +1,14 @@
+---
+version: '3'
+
+services:
+  hello:
+    image: ghcr.io/damacus/ee-hello-kube:0.0.4
+    ports:
+      - 80:8080
+    healthcheck:
+      test: curl --fail http://localhost:8080 || exit 1
+      interval: 1s
+      timeout: 5ss
+      retries: 5
+      start_period: 1s

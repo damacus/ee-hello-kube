@@ -1,6 +1,6 @@
 FROM alpine
-ARG VERSION=v0.0.2
-ARG ARCH=amd64
+ARG VERSION=v0.0.4
+ARG ARCH=
 ARG OS=linux
 
 RUN apk add curl &&\
